@@ -37,11 +37,11 @@ get_header();
 ?>
 <li id="<?php echo $child->post_title; ?>"<?php echo $li_class; ?>>
 <div>
-<a href="./exchangeDiary/<?php echo str_replace('work', '', $child->post_title); ?>/">
+<a href="../exchangeDiary/<?php echo str_replace('work', '', $child->post_title); ?>/">
 <img src="<?php the_field('diary_photo', $child->ID); ?>" alt="<?php the_field('title', $child->ID); ?>" />
 </a>
 </div>
-<div class="information"><?php the_field('works_state', $child->ID); ?></div>
+<div class="information"><?php the_field('diary_state', $child->ID); ?></div>
 <dl class="<?php the_field('works_color', $child->ID); ?>">
 <dt class="title"><?php echo str_replace('work', '', $child->post_title); ?></dt>
 <dd class="title"><?php echo get_field($prefix['title'] . 'title', $child->ID); ?></dd>
