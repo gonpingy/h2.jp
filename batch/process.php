@@ -1,7 +1,7 @@
 <?php
 require_once('./Requester.php');
 
-$text = 'process_14_';
+$text = 'process_19_';
 $photo_list = getPhotoList($text);
 generateProcess($photo_list);
 
@@ -24,7 +24,7 @@ function getPhotoList($text) {
   if ($result['status'] == 200) {
     $data = str_replace('jsonFlickrApi(', '', $result['content']);
     $data = json_decode(substr($data, 0, strlen( $data ) - 1), true);
-var_dump($data);
+
     $url_list = array();
     $query = array(
       'method' => 'flickr.photos.getInfo',
@@ -110,6 +110,7 @@ function generateProcess($photo_list) {
   }
 
   echo '</ul>' . PHP_EOL;
+  echo $i;
 }
 
 function compareTitleContent($a, $b) {
