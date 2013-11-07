@@ -1,7 +1,7 @@
 <?php
 require_once('./Requester.php');
 
-$text = 'process_19_';
+$text = 'process_24_';
 $photo_list = getPhotoList($text);
 generateProcess($photo_list);
 

@@ -74,7 +74,9 @@ article#profile div.weare article:first-child {
   width: 23%;
 }
 
-article#profile div.weare article h3 {
+article#profile div.weare article h3,
+article#profile div.weare article h4
+{
   text-align: center;
 }
 
