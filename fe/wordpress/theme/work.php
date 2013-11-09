@@ -66,6 +66,15 @@ $id = the_title('', '', false);
 
 <div class="hr"></div>
 
+<?php if ($id == 'work013'): ?>
+<h2 style="margin-top: 10px">・完成までのプロセス動画公開！</h2>
+<ul style="list-style: none">
+  <li style="margin: 10px"><a href="http://youtu.be/IirXTtCZkK0">documentaryof パーフェクトルーム</a></li>
+  <li style="margin: 10px"><a href="http://youtu.be/ihj8VWIP7Ko">パーフェクトルーム プロローグ 本編</a></li>
+  <li style="margin: 10px"><a href="http://youtu.be/CETe0Jf2Gp0">パーフェクトルーム プロローグ 予告</a></li>
+</ul>
+<?php endif; ?>
+
 <?php if (get_field('process_link_flag') === true): ?>
 <p>・工事中の写真は<a class="handihouse" href="./process/">こちら</a>から</p>
 <?php endif; ?>
