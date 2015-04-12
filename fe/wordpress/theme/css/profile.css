@@ -68,12 +68,29 @@ article#profile div.weare article {
 }
 
 /* 一人目のプロフィールだけ左右にボーダー表示 */
-article#profile div.weare article:first-child {
+article#profile div.weare article {
   margin-left: 3px;
   border-left: 1.5pt dotted #333333;
-  width: 23%;
+  border-right: 1.5pt dotted #333333;
+  width: 26%;
 }
 
+article#profile div.first article {
+  margin-left: 100px;
+}
+
+article#profile div.first article:first-child {
+  margin-left: 140px;
+}
+
+article#profile div.second article {
+  margin-right: 40px;
+}
+
+article#profile div.second article:first-child {
+  margin-left: 10px;
+}
+ 
 article#profile div.weare article h3,
 article#profile div.weare article h4
 {
