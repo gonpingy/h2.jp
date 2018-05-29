@@ -393,13 +393,13 @@ a:link, a:visited{
   margin:9.8vw auto 0; /*160px auto 90px;*/
   width:43vw;
   transition-duration:2s;
-  transition-delay:1s;
+  transition-delay:0s;
 }
 #section_last .nhcs2 {
   margin:1vw auto 4.4vw; /*160px auto 90px;*/
   width:55vw;
   transition-duration:2s;
-  transition-delay:1.2s;
+  transition-delay:0.2s;
 }
 #section_last .nhcs img,#section_last .nhcs2 img {
   width:100%;
@@ -407,7 +407,7 @@ a:link, a:visited{
 #section_last .links{
   margin-bottom:-1vw;
   transition-duration:2s;
-  transition-delay:1.4s;
+  transition-delay:0.4s;
 }
 #section_last .links img{
   width:5vw;/*72px;*/
@@ -419,7 +419,7 @@ a:link, a:visited{
   font-weight:bold;
   margin:0;
   transition-duration:2s;
-  transition-delay:1.6s;
+  transition-delay:0.6s;
 }
 
 @media screen and (max-width: 749px) {
