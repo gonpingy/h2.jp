@@ -95,18 +95,22 @@ a:link, a:visited{
   background-image: url(../img/bg_top.jpg);
   background-position: center center;
   background-size: cover;
-  animation: zoom 1s ease 0s 1 forwards;
-  -webkit-animation: zoom 1s ease 0s 1 forwards;
+  animation: zoom 4s ease 0s 1 forwards;
+  -webkit-animation: zoom 4s ease 0s 1 forwards;
   transition:1s;
   margin-bottom:0;
 }
 @keyframes zoom {
   0% {transform: scale(1.0, 1.0); opacity:0.55;}
-  100% {transform: scale(1.02, 1.02); opacity:1;}
+  20% {transform: scale(1.02, 1.02); opacity:1;}
+  70% {transform: scale(1.02, 1.02); opacity:1;}
+  100% {transform: scale(1.0, 1.0); opacity:0;}
 }
 @-webkit-keyframes zoom {
   0% {transform: scale(1.0, 1.0); opacity:0.55;}
-  100% {transform: scale(1.02, 1.02); opacity:1;}
+  20% {transform: scale(1.02, 1.02); opacity:1;}
+  70% {transform: scale(1.02, 1.02); opacity:1;}
+  100% {transform: scale(1.02, 1.02); opacity:0;}
 }
 
 @media screen and (max-width: 749px) {
