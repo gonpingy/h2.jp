@@ -12,16 +12,16 @@ get_header();
       <div id="secondview">
         <div id="top">
               <h1>
-                <img class="pc" src="<?= DIR_IMG ?>/title.png" alt="HandiHouse project will be REBORN.">
-                <img class="sp" src="<?= DIR_IMG ?>/title_sp.png" alt="HandiHouse project will be REBORN."></h1>
+                <img class="pc" src="<?= DIR_IMG_TEASER ?>/title.png" alt="HandiHouse project will be REBORN.">
+                <img class="sp" src="<?= DIR_IMG_TEASER ?>/title_sp.png" alt="HandiHouse project will be REBORN."></h1>
         </div>
-        <div id="btn_area"><a href="#section_one"><img src="<?= DIR_IMG ?>/arrow.gif" alt="scroll"></a></div>
+        <div id="btn_area"><a href="#section_one"><img src="<?= DIR_IMG_TEASER ?>/arrow.gif" alt="scroll"></a></div>
       </div>
 
       <div id="section_one">
 
         <div class="parallax simg simg01 pc cbefore"
-         data-parallax-bg-image="<?= DIR_IMG ?>/simg01.jpg"
+         data-parallax-bg-image="<?= DIR_IMG_TEASER ?>/simg01.jpg"
          data-parallax-bg-position="center center"
          data-parallax-speed="0.4"
          data-parallax-bg-size="contain"
@@ -33,7 +33,7 @@ get_header();
         <h2 class="stxt stxt01 sp">ハンディ流家づくり<br>「妄想から打ち上げまで」を<br>もっと広げたい、増やしたい。</h2>
 
         <div class="parallax simg simg02 pc cbefore"
-         data-parallax-bg-image="<?= DIR_IMG ?>/simg02.jpg"
+         data-parallax-bg-image="<?= DIR_IMG_TEASER ?>/simg02.jpg"
          data-parallax-bg-position="center center"
          data-parallax-speed="0.4"
          data-parallax-bg-size="contain"
@@ -58,7 +58,7 @@ get_header();
           </ul>
         </div>
         <div class="parallax simg simg03 pc cbefore"
-         data-parallax-bg-image="<?= DIR_IMG ?>/simg03.jpg"
+         data-parallax-bg-image="<?= DIR_IMG_TEASER ?>/simg03.jpg"
          data-parallax-bg-position="center center"
          data-parallax-speed="0.4"
          data-parallax-bg-size="contain"
@@ -98,13 +98,13 @@ get_header();
 
       <div id="section_last">
         <div class="">
-          <div class="nhcs cbefore2 pc"><img class="" src="<?= DIR_IMG ?>/nhcs.png"></div>
-          <div class="nhcs2 cbefore2 pc"><img class="" src="<?= DIR_IMG ?>/nhcs2.png"></div>
-          <div class="links cbefore2 pc"><a href="https://www.facebook.com/HandiHouseproject/" target="_blank"><img src="<?= DIR_IMG ?>/i_fb.png" alt="facebook"></a> <a href="https://www.instagram.com/handihouseproject/"  target="_blank"><img src="<?= DIR_IMG ?>/i_ig.png" alt="instagram"></a></div>
+          <div class="nhcs cbefore2 pc"><img class="" src="<?= DIR_IMG_TEASER ?>/nhcs.png"></div>
+          <div class="nhcs2 cbefore2 pc"><img class="" src="<?= DIR_IMG_TEASER ?>/nhcs2.png"></div>
+          <div class="links cbefore2 pc"><a href="https://www.facebook.com/HandiHouseproject/" target="_blank"><img src="<?= DIR_IMG_TEASER ?>/i_fb.png" alt="facebook"></a> <a href="https://www.instagram.com/handihouseproject/"  target="_blank"><img src="<?= DIR_IMG_TEASER ?>/i_ig.png" alt="instagram"></a></div>
           <div class="archive cbefore2 pc">これまでの活動はこちら → <a href="http://handihouse-project.jp/" target="_blank">HandiHouse project</a></div>
 
-          <div class="nhcs sp"><img class="" src="<?= DIR_IMG ?>/nhcs_sp.png"></div>
-          <div class="links sp"><a href="https://www.facebook.com/HandiHouseproject/" target="_blank"><img src="<?= DIR_IMG ?>/i_fb.png" alt="facebook"></a> <a href="https://www.instagram.com/handihouseproject/" target="_blank"><img src="<?= DIR_IMG ?>/i_ig.png" alt="instagram"></a></div>
+          <div class="nhcs sp"><img class="" src="<?= DIR_IMG_TEASER ?>/nhcs_sp.png"></div>
+          <div class="links sp"><a href="https://www.facebook.com/HandiHouseproject/" target="_blank"><img src="<?= DIR_IMG_TEASER ?>/i_fb.png" alt="facebook"></a> <a href="https://www.instagram.com/handihouseproject/" target="_blank"><img src="<?= DIR_IMG_TEASER ?>/i_ig.png" alt="instagram"></a></div>
           <div class="archive sp">これまでの活動はこちら → <a href="http://handihouse-project.jp/" target="_blank">HandiHouse project</a></div>
         </div>
       </div>

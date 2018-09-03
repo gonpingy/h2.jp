@@ -1,8 +1,8 @@
       <footer><p class="copyrights"><small>© <?= date('Y') ?> HandiHouse project All Rights Reserved.</small></p></footer>
     </div>
 
-    <script src="<?= DIR_JS ?>/parallax-background.min.js" ></script>
-    <script type="text/javascript" src="<?= DIR_JS ?>/jquery.inview.js"></script>
+    <script src="<?= DIR_JS_TEASER ?>/parallax-background.min.js" ></script>
+    <script type="text/javascript" src="<?= DIR_JS_TEASER ?>/jquery.inview.js"></script>
     <script>
     $(function() {
       $('.cbefore').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
