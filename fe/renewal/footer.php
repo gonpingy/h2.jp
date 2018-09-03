@@ -14,6 +14,10 @@
     </footer>
   </div>
 
+  <?php // @todo VISION ?>\
+  <?php if(get_the_ID() == 23): ?>
+  <script type="text/javascript" src="<?= DIR_JS ?>/jquery.inview.js"></script>
+  <?php endif; ?>
   <script type="text/javascript" src="<?= DIR_JS ?>/handi.js"></script>
   <script type="text/javascript" src="<?= DIR_JS ?>/handi_slide.js"></script>
 </body>
