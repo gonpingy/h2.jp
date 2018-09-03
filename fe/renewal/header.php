@@ -16,6 +16,7 @@ if (post_password_required($post)) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HandiHouse project</title>
 
+    <meta name="google-site-verification" content="RmDhfCF6U99ok34c8UnJBrZPQWzABjqohTFG_1PhFkA" />
     <meta name="description" content="HandiHouseproject、第2章が始まります。">
     <meta property="og:url" content="<?= get_current_link(); ?>">
     <meta property="og:type" content="website">
@@ -27,6 +28,7 @@ if (post_password_required($post)) {
     <link rel="icon" href="<?= DIR_IMG ?>/favicon.ico">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <?php // @todo TOP ?>
     <?php if(get_the_ID() == 17): ?>
     <script src="<?= DIR_JS ?>/jquery.cookie.js"></script>
     <?php endif; ?>
