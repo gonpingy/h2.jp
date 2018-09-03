@@ -34,6 +34,10 @@ if (post_password_required($post)) {
     <?php endif; ?>
     <!-- CSS読み込み -->
     <link rel="stylesheet" href="<?= DIR_CSS ?>/normalize.css">
+    <?php // @todo 会社情報 ?>
+    <?php if(get_the_ID() == 25): ?>
+    <link rel="stylesheet" href="css/featherlight.css">
+    <?php endif; ?>
     <link rel="stylesheet" href="<?= DIR_CSS ?>/hhstyle.css">
     <?php if(get_the_ID() == 17): ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
