@@ -167,7 +167,4 @@ get_header();
       </ul>
     </div>
 
-<?php
-// フッタ表示
-get_footer();
-?>
+<?php get_footer(); ?>

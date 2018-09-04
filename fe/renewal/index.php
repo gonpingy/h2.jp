@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: デフォルト
+ * Template Name: トップページ
  */
 get_header();
 ?>
@@ -133,7 +133,4 @@ get_header();
       </ul>
     </div>
 
-<?php
-// フッタ表示
-get_footer();
-?>
+<?php get_footer(); ?>

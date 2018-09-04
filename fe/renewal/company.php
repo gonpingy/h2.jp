@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: 会社情報
+ * Template Name: COMPANY
  */
 get_header();
 ?>
@@ -377,7 +377,4 @@ get_header();
       </ul>
     </div>
 
-<?php
-// フッタ表示
-get_footer();
-?>
+<?php get_footer(); ?>
