@@ -60,10 +60,8 @@ footer {
     padding: 1.1vw 0 0;
   }
   h2 {
-    font-size: 7.2vw/*9vw*/
-    ;
+    font-size: 7.2vw;
     text-align: center;
-    ;
     ;
   }
   h3 {
@@ -215,7 +213,6 @@ li {
   #header_top h1 {
     width: 40vw;
     margin: 0;
-    /*    padding: 0;*/
   }
   #header h1 img, #header_top h1 img {
     width: 35vw;
@@ -618,7 +615,7 @@ ul#genre_nav li.selected {
     padding: 16vw 0 13.3vw 4vw;
   }
   .op h2 {
-    font-size: 8.5vw;
+    font-size: 7.2vw;
     line-height: 1;
     margin-bottom: 9.6vw;
     padding-top: 0;
@@ -754,7 +751,6 @@ a.btn_b:hover, a.btn_b:active {
   padding: 1px 26px 0;
   vertical-align: 10%;
   color: white;
-  /*height:22px;*/
   background-color: #f04e23;
 }
 
@@ -829,14 +825,12 @@ a.btn_b:hover, a.btn_b:active {
 .move-page-top {
   display: block;
   width: 60px;
-  /*70px;*/
   height: 62px;
   cursor: pointer;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
   animation: run .4s steps(3) infinite;
-  /*72px;*/
   color: #fff;
   background: url('../img/i_totop_pc.png') no-repeat;
 }
@@ -2188,7 +2182,6 @@ TOP PAGE
 }
 
 @media screen and (max-width: 749px) {
-  /*　画面サイズ 749pxから適用　*/
   #firstview {
     height: 100vh;
     background-color: none;
@@ -2334,7 +2327,6 @@ TOP PAGE
 
 #section_one #msg {
   width: 640px;
-  /*60%;*/
   margin: 18px auto 0;
   text-align: justify;
 }
@@ -2346,7 +2338,6 @@ TOP PAGE
     width: 100vw;
     padding: 0 0 10vw;
     letter-spacing: 2px;
-    /*margin-top: 0;*/
   }
   #section_one h2 {
     font-size: 8vw;
@@ -2365,7 +2356,6 @@ TOP PAGE
     font-size: 3.7vw;
     line-height: 2;
     width: 86.8vw;
-    /*60%;*/
     margin: 3vw 6.6vw 6vw;
   }
 }
@@ -2445,6 +2435,27 @@ TOP PAGE
   }
 }
 
+/* 404 page*/
+
+#nf_notice p {
+  margin-top: 60px;
+}
+
+#nf_notice a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 749px) {
+  #nf_notice h2 {
+    text-align: center;
+  }
+  #nf_notice p {
+    margin-top: 15vw;
+    font-size: 3.8vw;
+    text-align: center;
+  }
+}
+
 /* bgimg area*/
 
 /*PC*/
@@ -2492,7 +2503,6 @@ TOP PAGE
   }
   100% {
     -webkit-transform: translateY(-5vh);
-    /*-50px);*/
     transform: translateY(-5vh);
     opacity: 1;
     -webkit-opacity: 1;
@@ -2805,7 +2815,6 @@ TOP PAGE
 
 .pc_i {
   display: inline;
-  /*width: 100%;*/
 }
 
 .sp, .sp_i {
