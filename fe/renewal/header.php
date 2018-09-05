@@ -42,8 +42,6 @@ if (post_password_required($post)) {
     <?php if(get_the_ID() == 17): ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <script src="https://www.youtube.com/iframe_api"></script>
-    <?php else: ?>
-    <link rel="stylesheet" href="<?= DIR_CSS ?>/para_bg.css" />
     <?php endif; ?>
 
     <?php wp_head(); ?>
