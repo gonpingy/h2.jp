@@ -35,281 +35,30 @@ get_header();
         <div id="member" class="contents_area">
           <h2>MEMBER</h2>
           <ul id="mem" class="pc">
+            <?php foreach  (SCF::get('MEMBER') as $group): ?>
             <li>
               <div class="mimg"><a href="#" data-featherlight="
-                <h4>荒木伸哉<br><span>Shinya Araki</span></h4>
-                <p>サウノル製作所<br></p>
-                <p>1983　　　　　東京都生まれ<br>
-                  2006　　　　　職業能力開発総合大学校 卒業<br>
-                  2006–10 　　　施工会社に勤務<br>
-                  2010　　　　　サウノル製作所 設立<br>
-                  2011　　　　　HandiHouse project 始動!</p>
+                <h4><?= $group['name'] ?><br><span><?= $group['name_en'] ?></span></h4>
+                <p><?= $group['certification'] ?></p>
+                <?= $group['description'] ?>
                   ">
-                <img src="<?= DIR_IMG ?>/m05_l.jpg" ></a>
-                <h4>荒木伸哉<br><span>Shinya Araki</span></h4></div>
+                <img src="<?= $group['photo'] ?>" ></a>
+                <h4><?= $group['name'] ?><br><span><?= $group['name_en'] ?></span></h4></div>
             </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>加藤渓一<br><span>Keiichi Kato</span></h4>
-                <p>studioPEACEsign<br>一級建築士</p>
-                <p>1983　　　　　東京都生まれ<br>
-                  2008　　　　　武蔵工業大学大学院修士課程修了(現:東京都市大学)<br>
-                  2008–10 　　　MOUNT FUJI ARCHITECTS STUDIO 勤務<br>
-                  2010　　　　　studioPEACEsign 設立<br>
-                  2011　　　　　HandiHouse project 始動!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m02_l.jpg" ></a>
-                <h4>加藤渓一<br><span>Keiichi Kato</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>坂田裕貴<br><span>Yuki Sakata</span></h4>
-                <p>cacco design studio<br>一級建築士</p>
-                <p>1986　　　　　福岡県生まれ<br>
-                    2005　　　　　カナダ モントリールで中南米の人たちと過ごす<br>
-                    2009　　　　　ICS college of arts 卒業<br>
-                    2009-10 　　　point. 他　設計事務所に勤務<br>
-                    2011　　　　　cacco design studio 設立<br>
-                    2011　　　　　HandiHouse project 始動!<br>
-                    2015-16 　　　株式会社 松陰会舘　勤務
-                  </p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m01_l.jpg" ></a>
-                <h4>坂田裕貴<br><span>Yuki Sakata</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>中田裕一<br><span>Yuichi Nakada</span></h4>
-                <p>中田製作所<br>一級建築士</p>
-                <p>1983　　　　　栃木県生まれ<br>
-                  2006　　　　　武蔵工業大学工学部建築学科卒業(現:東京都市大学)<br>
-                  2006–10 　　　施工会社に勤務<br>
-                  2010　　　　　中田製作所 設立<br>
-                  2011　　　　　HandiHouse project 始動!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m03_l.jpg" ></a>
-                <h4>中田裕一<br><span>Yuichi Nakada</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>山崎大輔<br><span>Daisuke Yamazaki</span></h4>
-                <p>DAY'S<br>一級施工管理技士<br>二級建築士</p>
-                <p>1985　　　　　東京都生まれ<br>
-                  2008　　　　　ものつくり大学 建築技能工芸学科 卒業<br>
-                  2008–14 　　　東急建設株式会社 勤務<br>
-                  2014　　　　　DAY'S 設立<br>
-                  2014　　　　　HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m04_l.jpg" ></a>
-                <h4>山崎大輔<br><span>Daisuke Yamazaki</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                    <h4>中田理恵<br><span>Rie Nakada</span></h4>
-                    <p>cacco design studio<br>省エネ建築診断士</p>
-                    <p>1983　　　　　神奈川県生まれ<br>
-                      2006　　　　　武蔵工業大学工学部建築学科卒業(現:東京都市大学)<br>
-                      2008　　　　　首都大学東京大学院建築学専攻卒業<br>
-                      2008-13 　　　日建設計に勤務<br>
-                      2013　　　　　中田製作所、HandiHouse project 参画!</p>
-                      ">
-                    <img src="<?= DIR_IMG ?>/m10_l.jpg" ></a>
-                <h4>中田理恵<br><span>Rie Nakada</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>佐伯太市<br><span>Taichi Saeki</span></h4>
-                <p>中田製作所<br></p>
-                <p>1993　　　　　東京都生まれ山梨育ち<br>
-                  2016　　　　　東京都市大学工学部建築学科卒業<br>
-                  2016　　　　　JIA 全国学生卒業設計コンクール　竹内賞<br>
-                  2016- 　　 　　中田製作所、HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m06_l.jpg" ></a>
-                <h4>佐伯太市<br><span>Taichi Saeki</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                    <h4>大石義高<br><span>Yoshitaka Ohishi</span></h4>
-                    <p>cacco design studio<br>二級建築士</p>
-                    <p>1991　　　　　福岡県生まれ<br>
-                      2015　　　　　横浜国立大学大学院修士課程修了<br>
-                      2015-16 　　　株式会社平成建設勤務<br>
-                      2017- 　　 　　cacco design studio、HandiHouse project 参画!</p>
-                      ">
-                <img src="<?= DIR_IMG ?>/m09_l.jpg" ></a>
-                <h4>大石義高<br><span>Yoshitaka Ohishi</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                    <h4>須藤直紀<br><span>Naoki Sudo</span></h4>
-                    <p><br></p>
-                    <p>1980　　　　　神奈川県生まれ<br>
-                      2004　　　　　東京学芸大学卒業<br>
-                      2004-09 　　　民間教育機関にて勤務<br>
-                      2009-17 　　　私立小・中学校勤務（きのくに子どもの村学園ほか）<br>
-                      2018　　　　　愛知産業大学建築科卒業<br>
-                      2018　　　　　HandiHouse project 参画!</p>
-                      ">
-                    <img src="<?= DIR_IMG ?>/m07_l.jpg" ></a>
-                <h4>須藤直紀<br><span>Naoki Sudo</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                    <h4>多久美聡<br><span>Misato Taku</span></h4>
-                    <p>studioPEACEsign<br></p>
-                    <p>1991　　　　　福岡県生まれ<br>
-                      2016　　　　　九州大学大学院芸術工学府修了<br>
-                      2016- 　　 　　株式会社ツクルバ<br>
-                      2018　　　　　studioPEACEsign、HandiHouse project 参画!!</p>
-                      ">
-                    <img src="<?= DIR_IMG ?>/m08_l.jpg" ></a>
-                <h4>多久美聡<br><span>Misato Taku</span></h4></div>
-            </li>
-
-            <!--　顔写真がない方用
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                    <h4>坂田裕貴<br><span>Yuki Sakata</span></h4>
-                    <p>cacco design studio<br>一級建築士</p>
-                    <p>1986　　　　　福岡県生まれ<br>2005　　　　　カナダにて遊学<br>2009　　　　　ICS college of arts 卒業<br>2009-10 　　　デザイン事務所・店舗設計事務所に勤務<br>2011　　　　　cacco design studio 設立<br>2011　　　　　HandiHouse project 始動!</p>
-                      ">
-                    <img src="img/m00_l.jpg" ></a>
-                <h4>坂田裕貴<br><span>Yuki Sakata</span></h4></div>
-            </li>
-
-          -->
+            <?php endforeach; ?>
           </ul>
           <ul id="mem_sp" class="sp">
+            <?php foreach  (SCF::get('MEMBER') as $group): ?>
             <li>
               <div class="mimg"><a href="#" data-featherlight="
-                <h4>荒木伸哉<br><span>Shinya Araki</span></h4>
-                <p>サウノル製作所<br></p>
-                <p>1983　　　　　東京都生まれ<br>
-                  2006　　　　　職業能力開発総合大学校 卒業<br>
-                  2006–10 　　　設計・施工会社に勤務<br>
-                  2010　　　　　サウノル製作所 設立<br>
-                  2011　　　　　HandiHouse project 始動!</p>
+                <h4><?= $group['name'] ?><br><span><?= $group['name_en'] ?></span></h4>
+                <p><?= $group['certification'] ?></p>
+                <?= $group['description'] ?>
                   ">
-                <img src="<?= DIR_IMG ?>/m05_l.jpg" ></a>
-                <h4>荒木伸哉<br><span>Shinya Araki</span></h4></div>
+                <img src="<?= $group['photo'] ?>" ></a>
+                <h4><?= $group['name'] ?><br><span><?= $group['name_en'] ?></span></h4></div>
             </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>加藤渓一<br><span>Keiichi Kato</span></h4>
-                <p>studio PEACE sign<br>一級建築士</p>
-                <p>1983　　　東京都生まれ<br>
-                  2008　　　武蔵工業大学大学院修士課程修了(現:東京都市大学)<br>
-                  2008–10　　設計事務所に勤務<br>
-                  2010　　　studio PEACE sign 設立<br>
-                  2011　　　HandiHouse project 始動!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m02_l.jpg" ></a>
-                <h4>加藤渓一<br><span>Keiichi Kato</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>坂田裕貴<br><span>Yuki Sakata</span></h4>
-                <p>cacco design studio<br>一級建築士</p>
-                <p>1986　　　福岡県生まれ<br>
-                    2005　　　カナダにて遊学<br>
-                    2009　　　ICS college of arts 卒業<br>
-                    2009-10 　デザイン事務所・店舗設計事務所に勤務<br>
-                    2011　　　cacco design studio 設立<br>
-                    2011　　　HandiHouse project 始動!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m01_l.jpg" ></a>
-                <h4>坂田裕貴<br><span>Yuki Sakata</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>中田裕一<br><span>Yuichi Nakada</span></h4>
-                <p>中田製作所<br>一級建築士</p>
-                <p>1983　　　　　栃木県生まれ<br>
-                  2006　　　　　武蔵工業大学 建築学科 卒業(現:東京都市大学)<br>
-                  2006–10 　　　設計・施工会社に勤務<br>
-                  2010　　　　　中田製作所 設立<br>
-                  2011　　　　　HandiHouse project 始動!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m03_l.jpg" ></a>
-                <h4>中田裕一<br><span>Yuichi Nakada</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>山崎大輔<br><span>Daisuke Yamazaki</span></h4>
-                <p>DAY'S<br>二級建築士</p>
-                <p>1985　　　　　東京都生まれ<br>
-                  2008　　　　　ものつくり大学建築技能工芸学科 卒業<br>
-                  2008–14 　　　設計・施工会社に勤務<br>
-                  2014　　　　　DAY’ S 設立<br>
-                  2014　　　　　HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m04_l.jpg" ></a>
-                <h4>山崎大輔<br><span>Daisuke Yamazaki</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>中田理恵<br><span>Rie Nakada</span></h4>
-                <p>cacco design studio<br>省エネ建築診断士</p>
-                <p>1983　　　　　神奈川県生まれ<br>
-                  2006　　　　　武蔵工業大学工学部建築学科卒業(現:東京都市大学)<br>
-                  2008　　　　　首都大学東京大学院建築学専攻卒業<br>
-                  2008-13 　　　日建設計に勤務<br>
-                  2013　　　　　中田製作所、HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m10_l.jpg" ></a>
-                <h4>中田理恵<br><span>Rie Nakada</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>佐伯太市<br><span>Taichi Saeki</span></h4>
-                <p>中田製作所<br></p>
-                <p>1993　　　　　東京都生まれ山梨育ち<br>
-                  2016　　　　　東京都市大学工学部建築学科卒業<br>
-                  2016　　　　　JIA 全国学生卒業設計コンクール　竹内賞<br>
-                  2016- 　　 　　中田製作所、HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m06_l.jpg" ></a>
-                <h4>佐伯太市<br><span>Taichi Saeki</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>大石義高<br><span>Yoshitaka Ohishi</span></h4>
-                <p>cacco design studio<br>二級建築士</p>
-                <p>1991　　　　　福岡県生まれ<br>
-                  2015　　　　　横浜国立大学大学院修士課程修了<br>
-                  2015-16 　　　株式会社平成建設勤務<br>
-                  2017- 　　 　　cacco design studio、HandiHouse project 参画!</p>
-                     ">
-                   <img src="<?= DIR_IMG ?>/m09_l.jpg" ></a>
-                <h4>大石義高<br><span>Yoshitaka Ohishi</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>須藤直紀<br><span>Naoki Sudo</span></h4>
-                <p><br></p>
-                <p>1980　　　　　神奈川県生まれ<br>
-                  2004　　　　　東京学芸大学卒業<br>
-                  2004-09 　　　民間教育機関にて勤務<br>
-                  2009-17 　　　私立小・中学校勤務（きのくに子どもの村学園ほか）<br>
-                  2018　　　　　愛知産業大学建築科卒業<br>
-                  2018　　　　　HandiHouse project 参画!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m07_l.jpg" ></a>
-                <h4>須藤直紀<br><span>Naoki Sudo</span></h4></div>
-            </li>
-            <li>
-              <div class="mimg"><a href="#" data-featherlight="
-                <h4>多久美聡<br><span>Misato Taku</span></h4>
-                <p>studioPEACEsign<br></p>
-                <p>1991　　　　　福岡県生まれ<br>
-                  2016　　　　　九州大学大学院芸術工学府修了<br>
-                  2016- 　　 　　株式会社ツクルバ<br>
-                  2018　　　　　studioPEACEsign、HandiHouse project 参画!!</p>
-                  ">
-                <img src="<?= DIR_IMG ?>/m08_l.jpg" ></a>
-                <h4>多久美聡<br><span>Misato Taku</span></h4></div>
-            </li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </div>

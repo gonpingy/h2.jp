@@ -36,7 +36,7 @@ if (post_password_required($post)) {
     <link rel="stylesheet" href="<?= DIR_CSS ?>/normalize.css">
     <?php // @todo 会社情報 ?>
     <?php if(get_the_ID() == 25): ?>
-    <link rel="stylesheet" href="css/featherlight.css">
+    <link rel="stylesheet" href="<?= DIR_CSS ?>/featherlight.css">
     <?php endif; ?>
     <link rel="stylesheet" href="<?= DIR_CSS ?>/hhstyle.css">
     <?php if(get_the_ID() == 17): ?>
