@@ -6,10 +6,6 @@ get_header();
 
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　MEDIA
-    </div>
-
     <div class="contents_wrapper">
       <div id="media" class="contents_area">
         <h2>MEDIA</h2>

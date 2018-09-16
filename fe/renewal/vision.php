@@ -5,9 +5,6 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　VISION
-    </div>
     <div class="contents_wrapper">
       <div id="vision" class="contents_area">
         <div class="abox">

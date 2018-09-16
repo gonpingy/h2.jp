@@ -5,9 +5,6 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="project.html">PROJECT</a>　>　<a href="project_c_top.html">COLLABORATION PROJECTS</a> > トキハウス
-    </div>
     <div class="contents_wrapper">
       <div id="cp_detail" class="contents_area">
         <div class="date">2018.07.11</div>

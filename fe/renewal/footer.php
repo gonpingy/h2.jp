@@ -4,12 +4,12 @@
 
     <footer>
       <ul id="footer_nav">
-        <li><a href="contact.html" class="btn_b">お問い合わせ</a></li>
-        <li><a href="company.html#a_recruit" class="btn_b">JOIN US!</a></li>
-        <li><a href="https://www.facebook.com/HandiHouseproject/" target="_blank"><img src="<?= DIR_IMG ?>/i_fb2.png" alt="HandiHouse facebook"></a></li>
-        <li><a href="https://www.instagram.com/handihouseproject/" target="_blank"> <img src="<?= DIR_IMG ?>/i_insta2.png" alt="HandiHouse instagram"></a></li>
+        <li><a href="<?= URL_CONTACT ?>" class="btn_b">お問い合わせ</a></li>
+        <li><a href="<?= URL_CONTACT_RECRUIT ?>" class="btn_b">JOIN US!</a></li>
+        <li><a href="<?= URL_FACEBOOK ?>" target="_blank"><img src="<?= DIR_IMG ?>/i_fb2.png" alt="HandiHouse facebook"></a></li>
+        <li><a href="<?= URL_INSTAGRAM ?>" target="_blank"> <img src="<?= DIR_IMG ?>/i_insta2.png" alt="HandiHouse instagram"></a></li>
       </ul>
-      <p><a href="index.html"><img src="<?= DIR_IMG ?>/hh_mark.png" alt="HandiHouse"></a></p>
+      <p><a href="<?= URL_TOP ?>"><img src="<?= DIR_IMG ?>/hh_mark.png" alt="HandiHouse"></a></p>
       <p class="copyrights">© <?= date('Y') ?> HandiHouse project All Rights Reserved.</p>
     </footer>
   </div>
