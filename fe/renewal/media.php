@@ -3,6 +3,7 @@
  * Template Name: MEDIA
  */
 get_header();
+
 ?>
 
     <div id="pan">
@@ -20,65 +21,34 @@ get_header();
           <li><a href="">LECTURE</a></li>
         </ul>
 
+        <?php
+          $paged = ($_GET['start']) ? $_GET['start'] : 1;
+          $args = array(
+            'paged' => $paged,
+            'post_type' => 'post',
+            'posts_per_page' => 1,
+            'category_name' => "",
+            'orderby' => 'date'
+          );
+          $wp_query = new WP_Query($args);
+
+          while ($wp_query->have_posts()):
+            $wp_query->the_post();
+        ?>
         <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.15</span> <span class="genre">MAGAZINE</span></div>
-          <h3>掲載誌のお知らせ</h3>
-          <p>マガジンハウスが刊行する「アンドプレミアム」に宮崎台のヴィンテージマンション１が掲載されました！<br>完成から６年経ってからもこうして取り上げ頂けて嬉しい限り！<br>是非ご覧ください。</p>
+          <div class="content_info"><span class="date"><?= get_the_date(); ?></span> <span class="genre"><?= get_the_category()[0]->name; ?></span></div>
+          <h3><?= get_the_title(); ?></h3>
+          <p><?= get_the_content(); ?></p>
         </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.10</span> <span class="genre">AWARD</span></div>
-          <h3>これからの建築士賞　受賞</h3>
-          <p>断熱タイニーハウスプロジェクトが東京建築士会の第4回これからの建築士賞を受賞致しました！<br>体感を届ける旅は、まだまだこれからです！ますます精進していきます！<br>沼田汐里<br>森本天希<br>中田理恵（HandiHouse project）</p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.05.24</span> <span class="genre">WEB</span></div>
-          <h3>Webマガジン掲載のお知らせ</h3>
-          <p>日野の家が戸建リノベwebマガジンの100%LIFEに掲載されました！<br>ぜひご覧ください〜！<br><a href="https://100life.jp/do-it-yourself/34484/" target="_blank">https://100life.jp/do-it-yourself/34484/</a></p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.05.24</span> <span class="genre">WEB</span></div>
-          <h3>Webマガジン掲載のお知らせ</h3>
-          <p>昨年の夏に作りました「中目黒の家」がカウカモマガジンに掲載されました。<br>お施主さんと話す中で「食を大事にしたい」という想いを形にした、大きなカウンターキッチン。<br><a href="https://cowcamo.jp/magazine/column/キッチンが中心の家" target="_blank">https://cowcamo.jp/magazine/column/キッチンが中心の家</a></p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.15</span> <span class="genre">MAGAZINE</span></div>
-          <h3>掲載誌のお知らせ</h3>
-          <p>マガジンハウスが刊行する「アンドプレミアム」に宮崎台のヴィンテージマンション１が掲載されました！<br>完成から６年経ってからもこうして取り上げ頂けて嬉しい限り！<br>是非ご覧ください。</p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.10</span> <span class="genre">AWARD</span></div>
-          <h3>これからの建築士賞　受賞</h3>
-          <p>断熱タイニーハウスプロジェクトが東京建築士会の第4回これからの建築士賞を受賞致しました！<br>体感を届ける旅は、まだまだこれからです！ますます精進していきます！<br>沼田汐里<br>森本天希<br>中田理恵（HandiHouse project）</p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.05.24</span> <span class="genre">WEB</span></div>
-          <h3>Webマガジン掲載のお知らせ</h3>
-          <p>日野の家が戸建リノベwebマガジンの100%LIFEに掲載されました！<br>ぜひご覧ください〜！<br><a href="https://100life.jp/do-it-yourself/34484/" target="_blank">https://100life.jp/do-it-yourself/34484/</a></p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.05.24</span> <span class="genre">WEB</span></div>
-          <h3>Webマガジン掲載のお知らせ</h3>
-          <p>昨年の夏に作りました「中目黒の家」がカウカモマガジンに掲載されました。<br>お施主さんと話す中で「食を大事にしたい」という想いを形にした、大きなカウンターキッチン。<br><a href="https://cowcamo.jp/magazine/column/キッチンが中心の家" target="_blank">https://cowcamo.jp/magazine/column/キッチンが中心の家</a></p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.15</span> <span class="genre">MAGAZINE</span></div>
-          <h3>掲載誌のお知らせ</h3>
-          <p>マガジンハウスが刊行する「アンドプレミアム」に宮崎台のヴィンテージマンション１が掲載されました！<br>完成から６年経ってからもこうして取り上げ頂けて嬉しい限り！<br>是非ご覧ください。</p>
-        </div>
-        <div class="media_content">
-          <div class="content_info"><span class="date">2018.06.10</span> <span class="genre">AWARD</span></div>
-          <h3>これからの建築士賞　受賞</h3>
-          <p>断熱タイニーハウスプロジェクトが東京建築士会の第4回これからの建築士賞を受賞致しました！<br>体感を届ける旅は、まだまだこれからです！ますます精進していきます！<br>沼田汐里<br>森本天希<br>中田理恵（HandiHouse project）</p>
-        </div>
-        <ul id="page_nav">
-          <li><a href=""><img src="<?= DIR_IMG ?>/page_p.png"alt="prev"></a></li>
-          <li class="current"><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
-          <li><a href="">5</a></li>
-          <li><a href=""><img src="<?= DIR_IMG ?>/page_n.png"alt="next"></a></li>
-        </ul>
+        <?php endwhile; ?>
+
+        <?php
+          if (function_exists('pagination')) {
+            pagination($wp_query->max_num_pages);
+          }
+        ?>
+
+        <?php wp_reset_postdata(); ?>
       </div>
 
 <?php get_template_part('2018/module/our_project'); ?>
