@@ -5,10 +5,6 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　CONTACT
-    </div>
-
     <div class="contents_wrapper">
       <div id="contact" class="contents_area">
         <h2>CONTACT</h2>

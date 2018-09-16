@@ -5,11 +5,8 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　PROJECT
-    </div>
     <div id="doors">
-      <a href="project_c_top.html" class="d01"></a><a href="project_i_top.html" class="d02"></a>
+      <a href="<?= URL_COLLABORATION_PROJECTS ?>" class="d01"></a><a href="<?= URL_INDEPENDENT_PROJECTS ?>" class="d02"></a>
     </div>
     <div class="contents_wrapper">
 

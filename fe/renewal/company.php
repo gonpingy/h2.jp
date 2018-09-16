@@ -5,10 +5,6 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　COMPANY
-    </div>
-
     <div class="contents_wrapper_mid">
       <div id="company" class="contents_area">
         <h2>COMPANY</h2>
@@ -76,12 +72,12 @@ get_header();
         <h2>RECRUIT</h2>
         <p>私たちと一緒にHandiHouseを<span class="sp_i"><br></span>盛り上げてくれるメンバーを募集しています。</p>
         <div id="recruit_msg">
-          <p>HandiHouse projectは<br><a href="vision.html">VISION</a>に賛同してくれる仲間を<span class="sp_i"><br></span>随時募集しております。<br> ともに「家づくり」の舞台に立ち、
+          <p>HandiHouse projectは<br><a href="<?= URL_VISION ?>">VISION</a>に賛同してくれる仲間を<span class="sp_i"><br></span>随時募集しております。<br> ともに「家づくり」の舞台に立ち、
             <span class="sp_i"><br></span>最高のエンターテイメントを<span class="sp_i"><br></span>日本中に提供しましょう。<br> 個人の方でも企業の方でも、
             <span class="sp_i"><br></span>HandiHouse projectの仲間、<span class="sp_i"><br></span>住まい手と共に、<span class="pc_i"><br></span> 住まいづくりの舞台で
             <span class="sp_i"><br></span>セッションを楽しみたい方からの<span class="sp_i"><br></span>ご連絡お待ちしております。</p>
         </div>
-        <p><a href="contact.html" class="btn_a">JOIN US!</a></p>
+        <p><a href="<?= URL_CONTACT ?>" class="btn_a">JOIN US!</a></p>
       </div>
     </div>
 

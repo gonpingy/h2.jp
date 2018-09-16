@@ -5,10 +5,6 @@
 get_header();
 ?>
 
-    <div id="pan">
-      <a href="index.html">HOME</a>　>　<a href="project.html">PROJECT</a>　>　COLLABORATION PROJECTS
-    </div>
-
     <div class="contents_wrapper">
       <div id="cp_top" class="contents_area">
         <h2>ハンディと<span class="s1"> /</span><span class="sp_i"><br></span> <span class="s2">COLLABORATION PROJECTS<span></h2>
