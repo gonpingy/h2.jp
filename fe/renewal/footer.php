@@ -14,17 +14,14 @@
     </footer>
   </div>
 
-  <?php // @todo 会社情報 ?>
-  <?php if(get_the_ID() == 25): ?>
+  <?php if(is_page_template('company.php')): ?>
   <script type="text/javascript" src="<?= DIR_JS ?>/featherlight.js"></script>
   <?php endif; ?>
-  <?php // @todo VISION ?>
-  <?php if(get_the_ID() == 23): ?>
+  <?php if(is_page_template('vision.php')): ?>
   <script type="text/javascript" src="<?= DIR_JS ?>/jquery.inview.js"></script>
   <?php endif; ?>
   <script type="text/javascript" src="<?= DIR_JS ?>/handi.js"></script>
-  <?php // @todo TOP or VISION ?>
-  <?php if(get_the_ID() == 17 || get_the_ID() == 23): ?>
+  <?php if(is_page_template('index.php') || is_page_template('vision.php')): ?>
   <script type="text/javascript" src="<?= DIR_JS ?>/handi_slide.js"></script>
   <?php endif; ?>
 </body>
