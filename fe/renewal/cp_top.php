@@ -28,9 +28,11 @@ get_header();
             'orderby' => 'menu_order'
           );
           $wp_query = new WP_Query($args);
+          $i = 1;
 
           while ($wp_query->have_posts()):
             $wp_query->the_post();
+            $i++;
 
             $member = [member_last_name($wp_query->post->member1)];
 
@@ -43,13 +45,36 @@ get_header();
             <div class="content_info"><span class="date"><?= $wp_query->post->date ?></span> <span class="genre"><?= get_the_category()[0]->name ?></span></div>
             <h3><?= the_title() ?></h3>
             <div class="cp_member">
+              <?php if ($i <= 2): ?>
               <img src="<?= member_to_photo($wp_query->post->member1) ?>">
               <?php if (count($member) == 2): ?>
               <img src="<?= member_to_photo($wp_query->post->member2) ?>">
               <?php endif; ?>
               <br>担当<br><?= implode('・', $member) ?>
+              <?php else: ?>
+
+              <p>
+                <img src="<?= member_to_photo($wp_query->post->member1) ?>">
+                <?php if (count($member) == 2): ?>
+                <img src="<?= member_to_photo($wp_query->post->member2) ?>">
+                <?php endif; ?>
+              </p>
+              <p>担当<span class="sp_i"> </span><span class="pc_i"><br></span><?= implode('・', $member) ?></p>
+              <?php endif; ?>
             </div>
             <div class="sp readmore"><a href="<?= $wp_query->post->guid ?>">READ MORE&nbsp;&nbsp;></a></div>
+          </li>
+
+<li>
+            <div class="cpimg"><a href="project_c_detail.html"><img src="img/cp06.jpg"></a>
+            </div>
+            <div class="content_info"><span class="date">2018.07.05</span> <span class="genre">MANSION</span></div>
+            <h3>八王子のアパート</h3>
+            <div class="cp_member">
+              <p><img src="img/m03.jpg"><img src="img/m04.jpg"></p>
+              <p>担当<span class="sp_i"> </span><span class="pc_i"><br></span>中田・山崎</p>
+            </div>
+            <div class="sp readmore"><a href="project_c_detail.html">READ MORE&nbsp;&nbsp;></a></div>
           </li>
           <?php endwhile; ?>
         </ul>
