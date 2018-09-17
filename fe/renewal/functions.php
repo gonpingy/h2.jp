@@ -154,3 +154,38 @@ class get_adjacent_page {
         return "ORDER BY p.menu_order $this->orderby, p.post_title $this->orderby LIMIT 1";
     }
 }
+
+add_action('init','add_categories_for_pages'); 
+
+function add_categories_for_pages() {
+  register_taxonomy_for_object_type('category', 'page');
+}
+
+add_action( 'pre_get_posts', 'nobita_merge_page_categories_at_category_archive' ); 
+
+function nobita_merge_page_categories_at_category_archive($query) {
+  if ($query->is_category== true && $query->is_main_query()) {
+    $query->set('post_type', array( 'post', 'page', 'nav_menu_item'));
+  }
+}
+
+function member_to_photo($member) {
+  $photo_list = [
+    '荒木 伸哉' => DIR_IMG  . '/m05.jpg',
+    '加藤 渓一' => DIR_IMG  . '/m02.jpg',
+    '坂田 裕貴' => DIR_IMG  . '/m01.jpg',
+    '中田 裕一' => DIR_IMG  . '/m03.jpg',
+    '山崎 大輔' => DIR_IMG  . '/m04.jpg',
+    '中田 理恵' => DIR_IMG  . '/m10.jpg',
+    '佐伯 太市' => DIR_IMG  . '/m06.jpg',
+    '大石 義高' => DIR_IMG  . '/m09.jpg',
+    '須藤 直紀' => DIR_IMG  . '/m07.jpg',
+    '多久 美聡' => DIR_IMG  . '/m08.jpg'
+  ];
+
+  return $photo_list[$member];
+}
+
+function member_last_name($member) {
+  return explode(" ", $member)[0];
+}
