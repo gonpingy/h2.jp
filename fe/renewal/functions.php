@@ -189,3 +189,6 @@ function member_to_photo($member) {
 function member_last_name($member) {
   return explode(" ", $member)[0];
 }
+
+add_filter('wpcf7_load_js', '__return_false');
+add_filter('wpcf7_load_css', '__return_false');

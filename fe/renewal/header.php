@@ -1,4 +1,8 @@
 <?php
+if (is_page_template('teaser.php')) {
+  require_once(get_template_directory() . '/teaser/header.php');
+} else {
+
 require_once(get_template_directory() . '/config.php');
 
 // パスワード保護
@@ -23,8 +27,10 @@ if (empty($og_title)) {
 if (empty($og_description)) {
   $og_description = get_the_title();
 }
+}
 ?>
 
+<?php if (!is_page_template('teaser.php')): ?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -45,18 +51,16 @@ if (empty($og_description)) {
     <link rel="icon" href="<?= DIR_IMG ?>/favicon.ico">
     <!-- jQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <?php // @todo TOP ?>
-    <?php if(get_the_ID() == 17): ?>
+    <?php if (is_page_template('index.php')): ?>
     <script src="<?= DIR_JS ?>/jquery.cookie.js"></script>
     <?php endif; ?>
     <!-- CSS読み込み -->
     <link rel="stylesheet" href="<?= DIR_CSS ?>/normalize.css">
-    <?php // @todo 会社情報 ?>
-    <?php if(get_the_ID() == 25): ?>
+    <?php if (is_page_template('company.php')): ?>
     <link rel="stylesheet" href="<?= DIR_CSS ?>/featherlight.css">
     <?php endif; ?>
     <link rel="stylesheet" href="<?= DIR_CSS ?>/hhstyle.css">
-    <?php if(get_the_ID() == 17): ?>
+    <?php if (is_page_template('index.php')): ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <script src="https://www.youtube.com/iframe_api"></script>
     <?php endif; ?>
@@ -107,3 +111,4 @@ if (empty($og_description)) {
       <?php endif; ?>
     </div>
     <?php endif; ?>
+<?php endif; ?>
