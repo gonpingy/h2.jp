@@ -5,7 +5,7 @@
     <footer>
       <ul id="footer_nav">
         <li><a href="<?= URL_CONTACT ?>" class="btn_b">お問い合わせ</a></li>
-        <li><a href="<?= URL_CONTACT_RECRUIT ?>" class="btn_b">JOIN US!</a></li>
+        <li><a href="<?= URL_COMPANY_RECRUIT ?>" class="btn_b">JOIN US!</a></li>
         <li><a href="<?= URL_FACEBOOK ?>" target="_blank"><img src="<?= DIR_IMG ?>/i_fb2.png" alt="HandiHouse facebook"></a></li>
         <li><a href="<?= URL_INSTAGRAM ?>" target="_blank"> <img src="<?= DIR_IMG ?>/i_insta2.png" alt="HandiHouse instagram"></a></li>
       </ul>

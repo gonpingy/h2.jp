@@ -16,7 +16,7 @@ get_header();
     <div class="contents_wrapper">
       <div id="contact" class="contents_area">
         <h2>CONTACT</h2>
-        <?= do_shortcode( '[contact-form-7 id="55" title="コンタクトフォーム 1"]' ); ?>
+        <?= do_shortcode( '[contact-form-7 id="47" title="CONTACT"]' ); ?>
         <?php
         /*
 <p>お仕事のご依頼、ご相談、取材等の<span class="sp_i"><br></span>お問い合わせは下記フォームより<span class="sp_i"><br></span>ご連絡下さい。</p>
