@@ -4,10 +4,10 @@
  */
 get_header();
 
-$member = [SCF::get('member1')];
+$member = [member_last_name(SCF::get('member1'))];
 
 if (!empty(SCF::get('member2'))) {
-  $member[] = SCF::get('member2');
+  $member[] = member_last_name(SCF::get('member2'));
 }
 
 $previous = get_previous_page();
@@ -16,7 +16,7 @@ $next = get_next_page();
 
     <div class="contents_wrapper">
       <div id="cp_detail" class="contents_area">
-        <div class="date">?= SCF::get('date') ?></div>
+        <div class="date"><?= SCF::get('date') ?></div>
         <h3><?= get_the_title() ?></h3>
         <div id="copy"><?= SCF::get('copy') ?></div>
         <div id="cp_member">担当：<?= implode('・', $member) ?></div>

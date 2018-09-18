@@ -10,20 +10,21 @@ get_header();
       <div id="media" class="contents_area">
         <h2>MEDIA</h2>
         <ul id="genre_nav">
-          <li class="selected"><a href="">ALL</a></li>
-          <li><a href="">MAGAZINE</a></li>
-          <li><a href="">WEB</a></li>
-          <li><a href="">AWARD</a></li>
-          <li><a href="">LECTURE</a></li>
+          <li class="selected"><a href="./">ALL</a></li>
+          <li><a href="./?category=MAGAZINE">MAGAZINE</a></li>
+          <li><a href="./?category=WEB">WEB</a></li>
+          <li><a href="./?category=AWARD">AWARD</a></li>
+          <li><a href="./?category=LECTURE">LECTURE</a></li>
         </ul>
 
         <?php
-          $paged = ($_GET['start']) ? $_GET['start'] : 1;
+          $paged = ($_GET['page']) ? $_GET['page'] : 1;
+          $category_name = ($_GET['category']) ? $_GET['category'] : '';
           $args = array(
             'paged' => $paged,
             'post_type' => 'post',
-            'posts_per_page' => 1,
-            'category_name' => "",
+            'posts_per_page' => 10,
+            'category_name' => $category_name,
             'orderby' => 'date'
           );
           $wp_query = new WP_Query($args);
