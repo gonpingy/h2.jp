@@ -15,7 +15,7 @@ define('URL_INDEPENDENT_PROJECTS', get_home_url(null, 'project/independent'));
 define('URL_MEDIA', get_home_url(null, 'media'));
 define('URL_COMPANY', get_home_url(null, 'company'));
 define('URL_COMPANY_MEMBER', get_home_url(null, 'company#a_member'));
+define('URL_COMPANY_RECRUIT', get_home_url(null, 'company#a_recruit'));
 define('URL_CONTACT', get_home_url(null, 'contact'));
-define('URL_CONTACT_RECRUIT', get_home_url(null, 'contact#a_recruit'));
 define('URL_FACEBOOK', 'https://www.facebook.com/HandiHouseproject/');
 define('URL_INSTAGRAM', 'https://www.instagram.com/handihouseproject/');
