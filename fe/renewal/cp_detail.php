@@ -33,13 +33,17 @@ $next = get_next_page();
           </div>
         </div>
         <ul id="cp_detail_nav">
-          <?php if (!empty($previous)): ?>
-          <li class=""><a href="<?= $previous->guid ?>">＜ PREV</a></li>
-          <?php endif; ?>
+          <li class="">
+            <?php if (!empty($previous)): ?>
+            <a href="<?= $previous->guid ?>">＜ PREV</a>
+            <?php endif; ?>
+          </li>
           <li><a href="<?= URL_COLLABORATION_PROJECTS ?>">一覧へ</a></li>
-          <?php if (!empty($next)): ?>
-          <li class=""><a href="<?= $next->guid ?>">NEXT ></a></li>
-          <?php endif; ?>
+          <li class="">
+            <?php if (!empty($next)): ?>
+            <a href="<?= $next->guid ?>">NEXT ></a>
+            <?php endif; ?>
+          </li>
         </ul>
       </div>
 

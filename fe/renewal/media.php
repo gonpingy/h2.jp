@@ -35,14 +35,24 @@ get_header();
         <div class="media_content">
           <div class="content_info"><span class="date"><?= get_the_date(); ?></span> <span class="genre"><?= get_the_category()[0]->name; ?></span></div>
           <h3><?= get_the_title(); ?></h3>
-          <p><?= get_the_content(); ?></p>
+          <p><?= nl2br(get_the_content()); ?></p>
         </div>
         <?php endwhile; ?>
 
+<ul id="page_nav">
+  <li><a href=""><img src="<?= DIR_IMG ?>/page_p.png"alt="prev"></a></li>
+          <li class="current"><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href=""><img src="<?= DIR_IMG ?>/page_n.png"alt="next"></a></li>
+        </ul>
+      </div>
         <?php
-          if (function_exists('pagination')) {
-            pagination($wp_query->max_num_pages);
-          }
+          //if (function_exists('pagination')) {
+          //  pagination($wp_query->max_num_pages);
+          //}
         ?>
 
         <?php wp_reset_postdata(); ?>
