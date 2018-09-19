@@ -4,31 +4,44 @@
  */
 get_header();
 
+$map = [
+  'ALL' => ['url' => './', 'selected' => ''],
+  'HOUSE' => ['url' => './?category=HOUSE', 'selected' => ''],
+  'MANSION' => ['url' => './?category=MANSION', 'selected' => ''],
+  'SHOP' => ['url' => './?category=SHOP', 'selected' => ''],
+  'OTHERS' => ['url' => './?category=OTHERS', 'selected' => ''],
+];
+$category_name = ($_GET['category']) ? $_GET['category'] : '';
+
+if (isset($map[$category_name])) {
+  $map[$category_name]['selected'] = ' class="selected"';
+} else {
+  $map['ALL']['selected'] = ' class="selected"';
+}
 ?>
 
     <div class="contents_wrapper">
       <div id="cp_top" class="contents_area">
         <h2>ハンディと<span class="s1"> /</span><span class="sp_i"><br></span> <span class="s2">COLLABORATION PROJECTS<span></h2>
         <ul id="genre_nav">
-          <li class="selected"><a href="./">ALL</a></li>
-          <li><a href="./?category=HOUSE">HOUSE</a></li>
-          <li><a href="./?category=MANSION">MANSION</a></li>
-          <li><a href="./?category=SHOP">SHOP</a></li>
-          <li><a href="./?category=OTHERS">OTHERS</a></li>
+          <?php foreach ($map as $key => $value): ?>
+          <li<?= $value['selected'] ?>><a href="<?= $value['url'] ?>"><?= $key ?></a></li>
+          <?php endforeach; ?>
         </ul>
 
         <ul id="cp_list">
           <?php
-          $paged = ($_GET['start']) ? $_GET['start'] : 1;
-          $category_name = ($_GET['category']) ? $_GET['category'] : '';
+          $paged = ($_GET['pg']) ? $_GET['pg'] : 1;
           $args = array(
+            'paged' => $paged,
             'post_type' => 'page',
             'post_parent' => $post->ID,
+            'posts_per_page' => 14,
             'category_name' => $category_name,
-            'orderby' => 'menu_order'
+            'orderby' => 'menu_order ASC'
           );
           $wp_query = new WP_Query($args);
-          $i = 1;
+          $i = 0;
 
           while ($wp_query->have_posts()):
             $wp_query->the_post();
@@ -41,7 +54,7 @@ get_header();
             }
           ?>
           <li>
-            <div class="cpimg"><a href="project_c_detail.html"><img src="<?= $wp_query->post->photo ?>" ></a></div>
+            <div class="cpimg"><a href="<?= $wp_query->post->guid ?>"><img src="<?= $wp_query->post->photo ?>" ></a></div>
             <div class="content_info"><span class="date"><?= $wp_query->post->date ?></span> <span class="genre"><?= get_the_category()[0]->name ?></span></div>
             <h3><?= the_title() ?></h3>
             <div class="cp_member">
@@ -64,30 +77,10 @@ get_header();
             </div>
             <div class="sp readmore"><a href="<?= $wp_query->post->guid ?>">READ MORE&nbsp;&nbsp;></a></div>
           </li>
-
-<li>
-            <div class="cpimg"><a href="project_c_detail.html"><img src="img/cp06.jpg"></a>
-            </div>
-            <div class="content_info"><span class="date">2018.07.05</span> <span class="genre">MANSION</span></div>
-            <h3>八王子のアパート</h3>
-            <div class="cp_member">
-              <p><img src="img/m03.jpg"><img src="img/m04.jpg"></p>
-              <p>担当<span class="sp_i"> </span><span class="pc_i"><br></span>中田・山崎</p>
-            </div>
-            <div class="sp readmore"><a href="project_c_detail.html">READ MORE&nbsp;&nbsp;></a></div>
-          </li>
           <?php endwhile; ?>
         </ul>
 
-        <ul id="page_nav">
-          <li class="hide"><a href=""><img src="<?= DIR_IMG ?>/page_p.png"alt="prev"></a></li>
-          <li class="current"><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
-          <li><a href="">5</a></li>
-          <li class=""><a href=""><img src="<?= DIR_IMG ?>/page_n.png"alt="next"></a></li>
-        </ul>
+        <?php pagination($wp_query); ?>
       </div>
 
 <?php get_template_part('2018/module/our_project'); ?>

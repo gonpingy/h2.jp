@@ -19,8 +19,8 @@ $(function() {
 //集合写真をランダムに表示
 $(function() {
     var images = [
-      'img/top_img02_1.jpg',
-      'img/top_img02_2.jpg'
+      '../../wp-content/themes/handihouse/2018/img/top_img02_1.jpg',
+      '../../wp-content/themes/handihouse/2018/img/top_img02_2.jpg'
     ];
     var randImg = images[Math.floor(Math.random() * images.length)];
     $('.rimg').attr('src', randImg);
