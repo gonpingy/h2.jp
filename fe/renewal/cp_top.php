@@ -36,7 +36,7 @@ if (isset($map[$category_name])) {
             'paged' => $paged,
             'post_type' => 'page',
             'post_parent' => $post->ID,
-            'posts_per_page' => 3,
+            'posts_per_page' => 14,
             'category_name' => $category_name,
             'orderby' => 'menu_order ASC'
           );
