@@ -13,44 +13,58 @@ function get_current_link() {
  return (is_ssl() ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 }
 
-function pagination($pages = '', $range = 2) {
-  $showitems = ($range * 2) + 1;
+function pagination($wp_query) {
+  $paged = $wp_query->query['paged'];
+  $category_name = $wp_query->query['category_name'];
 
-  global $paged;
-  if(empty($paged)) $paged = 1;
+  echo '<ul id="page_nav">';
 
-  if($pages == '') {
-    global $wp_query;
-    $pages = $wp_query->max_num_pages;
+  if ($paged <= 2) {
+    $start = 1;
+  } else {
+    $start = $paged - 2;
+  }
 
-    if(!$pages) {
-      $pages = 1;
+  if ($start + 4 > $wp_query->max_num_pages) {
+    $last = $wp_query->max_num_pages;
+
+    if ($last - $start < 4 && $last - 4 > 0) {
+      $start = $last - 4;
+    }
+  } else {
+    $last = $start + 4;
+  }
+
+  if ($last - $start < 4) {
+  }
+
+  $query = [];
+
+  if (!empty($category_name)) {
+    $query = ['category' => $category_name];
+  }
+
+  if ($paged > 1) {
+    $query['pg'] = $paged - 1;
+    echo sprintf('<li><a href="./?%s"><img src="%s/page_p.png"alt="prev"></a></li>', http_build_query($query), DIR_IMG);
+  }
+
+  for ($i = $start; $i <= $last; $i++) {
+    $query['pg'] = $i;
+
+    if ($i == $paged) {
+      echo sprintf('<li class="current"><a href="./?%s">%d</a></li>', http_build_query($query), $i);
+    } else {
+      echo sprintf('<li><a href="./?%s">%d</a></li>', http_build_query($query), $i);
     }
   }
 
-  if(1 != $pages) {
-    echo '<ul id="page_nav">';
-
-    if ($paged > 1 && $showitems < $pages) {
-      echo sprintf('<li><a href=""><img src="%s" alt="prev"></a></li>', DIR_IMG . '/page_p.png');
-    }
-
-    for ($i = 1; $i <= $pages; $i++) {
-      if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems )) {
-        if ($paged == $i) {
-          echo sprintf('<li class="current"><a href="">%d</a></li>', $i);
-        } else {
-          echo sprintf('<li><a href="">%d</a></li>', $i);
-        }
-      }
-    }
-
-    if ($paged < $pages && $showitems < $pages) {
-      echo sprintf('<li><a href=""><img src="%s" alt="next"></a></li>', DIR_IMG . '/page_n.png');
-    }
-
-    echo '</ul>';
+  if ($paged < $wp_query->max_num_pages) {
+    $query['pg'] = $paged + 1;
+    echo sprintf('<li><a href="./?%s"><img src="%s/page_n.png"alt="next"></a></li>', http_build_query($query), DIR_IMG);
   }
+
+  echo '</ul>';
 }
 
 function get_next_page() {

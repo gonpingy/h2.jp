@@ -30,8 +30,7 @@ if (isset($map[$category_name])) {
         </ul>
 
         <?php
-          $paged = ($_GET['page']) ? $_GET['page'] : 1;
-          $category_name = ($_GET['category']) ? $_GET['category'] : '';
+          $paged = ($_GET['pg']) ? $_GET['pg'] : 1;
           $args = array(
             'paged' => $paged,
             'post_type' => 'post',
@@ -51,21 +50,7 @@ if (isset($map[$category_name])) {
         </div>
         <?php endwhile; ?>
 
-<ul id="page_nav">
-  <li><a href=""><img src="<?= DIR_IMG ?>/page_p.png"alt="prev"></a></li>
-          <li class="current"><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
-          <li><a href="">5</a></li>
-          <li><a href=""><img src="<?= DIR_IMG ?>/page_n.png"alt="next"></a></li>
-        </ul>
-      </div>
-        <?php
-          //if (function_exists('pagination')) {
-          //  pagination($wp_query->max_num_pages);
-          //}
-        ?>
+        <?php pagination($wp_query); ?>
 
         <?php wp_reset_postdata(); ?>
       </div>

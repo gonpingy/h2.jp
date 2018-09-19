@@ -6,7 +6,7 @@ get_header();
 
 $map = [
   'ALL' => ['url' => './', 'selected' => ''],
-  'HOME' => ['url' => './?category=HOME', 'selected' => ''],
+  'HOUSE' => ['url' => './?category=HOUSE', 'selected' => ''],
   'MANSION' => ['url' => './?category=MANSION', 'selected' => ''],
   'SHOP' => ['url' => './?category=SHOP', 'selected' => ''],
   'OTHERS' => ['url' => './?category=OTHERS', 'selected' => ''],
@@ -31,11 +31,12 @@ if (isset($map[$category_name])) {
 
         <ul id="cp_list">
           <?php
-          $paged = ($_GET['start']) ? $_GET['start'] : 1;
+          $paged = ($_GET['pg']) ? $_GET['pg'] : 1;
           $args = array(
+            'paged' => $paged,
             'post_type' => 'page',
             'post_parent' => $post->ID,
-            'posts_per_page' => 14,
+            'posts_per_page' => 3,
             'category_name' => $category_name,
             'orderby' => 'menu_order ASC'
           );
@@ -79,15 +80,7 @@ if (isset($map[$category_name])) {
           <?php endwhile; ?>
         </ul>
 
-        <ul id="page_nav">
-          <li class="hide"><a href=""><img src="<?= DIR_IMG ?>/page_p.png"alt="prev"></a></li>
-          <li class="current"><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
-          <li><a href="">5</a></li>
-          <li class=""><a href=""><img src="<?= DIR_IMG ?>/page_n.png"alt="next"></a></li>
-        </ul>
+        <?php pagination($wp_query); ?>
       </div>
 
 <?php get_template_part('2018/module/our_project'); ?>
