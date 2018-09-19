@@ -4,17 +4,29 @@
  */
 get_header();
 
+$map = [
+  'ALL' => ['url' => './', 'selected' => ''],
+  'MAGAZINE' => ['url' => './?category=MAGAZINE', 'selected' => ''],
+  'WEB' => ['url' => './?category=WEB', 'selected' => ''],
+  'AWARD' => ['url' => './?category=AWARD', 'selected' => ''],
+  'LECTURE' => ['url' => './?category=LECTURE', 'selected' => ''],
+];
+$category_name = ($_GET['category']) ? $_GET['category'] : '';
+
+if (isset($map[$category_name])) {
+  $map[$category_name]['selected'] = ' class="selected"';
+} else {
+  $map['ALL']['selected'] = ' class="selected"';
+}
 ?>
 
     <div class="contents_wrapper">
       <div id="media" class="contents_area">
         <h2>MEDIA</h2>
         <ul id="genre_nav">
-          <li class="selected"><a href="./">ALL</a></li>
-          <li><a href="./?category=MAGAZINE">MAGAZINE</a></li>
-          <li><a href="./?category=WEB">WEB</a></li>
-          <li><a href="./?category=AWARD">AWARD</a></li>
-          <li><a href="./?category=LECTURE">LECTURE</a></li>
+          <?php foreach ($map as $key => $value): ?>
+          <li<?= $value['selected'] ?>><a href="<?= $value['url'] ?>"><?= $key ?></a></li>
+          <?php endforeach; ?>
         </ul>
 
         <?php

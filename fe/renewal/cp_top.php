@@ -4,23 +4,34 @@
  */
 get_header();
 
+$map = [
+  'ALL' => ['url' => './', 'selected' => ''],
+  'HOME' => ['url' => './?category=HOME', 'selected' => ''],
+  'MANSION' => ['url' => './?category=MANSION', 'selected' => ''],
+  'SHOP' => ['url' => './?category=SHOP', 'selected' => ''],
+  'OTHERS' => ['url' => './?category=OTHERS', 'selected' => ''],
+];
+$category_name = ($_GET['category']) ? $_GET['category'] : '';
+
+if (isset($map[$category_name])) {
+  $map[$category_name]['selected'] = ' class="selected"';
+} else {
+  $map['ALL']['selected'] = ' class="selected"';
+}
 ?>
 
     <div class="contents_wrapper">
       <div id="cp_top" class="contents_area">
         <h2>ハンディと<span class="s1"> /</span><span class="sp_i"><br></span> <span class="s2">COLLABORATION PROJECTS<span></h2>
         <ul id="genre_nav">
-          <li class="selected"><a href="./">ALL</a></li>
-          <li><a href="./?category=HOUSE">HOUSE</a></li>
-          <li><a href="./?category=MANSION">MANSION</a></li>
-          <li><a href="./?category=SHOP">SHOP</a></li>
-          <li><a href="./?category=OTHERS">OTHERS</a></li>
+          <?php foreach ($map as $key => $value): ?>
+          <li<?= $value['selected'] ?>><a href="<?= $value['url'] ?>"><?= $key ?></a></li>
+          <?php endforeach; ?>
         </ul>
 
         <ul id="cp_list">
           <?php
           $paged = ($_GET['start']) ? $_GET['start'] : 1;
-          $category_name = ($_GET['category']) ? $_GET['category'] : '';
           $args = array(
             'post_type' => 'page',
             'post_parent' => $post->ID,
