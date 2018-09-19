@@ -6,12 +6,13 @@ get_header();
 
 $member = [member_last_name(SCF::get('member1'))];
 
-if (!empty(SCF::get('member2'))) {
+if (SCF::get('member2') != 'なし') {
   $member[] = member_last_name(SCF::get('member2'));
 }
 
 $previous = get_previous_page();
 $next = get_next_page();
+
 ?>
 
     <div class="contents_wrapper">
