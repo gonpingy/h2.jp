@@ -29,7 +29,7 @@ $next = get_next_page();
           <h3>ABOUT PROJECT</h3>
           <div id="cp_info_d">
             <?= SCF::get('about_project') ?>
-            <p><a href="<?= SCF::get('projcet_album') ?>">プロジェクトのアルバムを見る（Facebook） ></a>
+            <p><a href="<?= SCF::get('projcet_album') ?>" target="_blank">プロジェクトのアルバムを見る（Facebook） ></a>
           </div>
         </div>
         <ul id="cp_detail_nav">
