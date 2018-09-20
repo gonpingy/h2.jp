@@ -34,11 +34,41 @@ get_header();
           <p><a href="javascript:contact_form.submit()" class="btn_a nouse">送信</a></p>
          */
         ?>
-          <p>
-            土日祝日のお問い合わせに関しましては、翌平日営業日以降のご返信となります。<br> また、お問い合わせ内容により、お返事に数日頂く場合がございます。あらかじめご了承ください。
-            <br> 弊社より送信するお客様への電子メールは、お客様個人宛にお客様のお問い合わせにお答えさせていただく目的でお送りするものです。
-          </p>
+        <p>
+          土日祝日のお問い合わせに関しましては、翌平日営業日以降のご返信となります。<br> また、お問い合わせ内容により、お返事に数日頂く場合がございます。あらかじめご了承ください。
+          <br> 弊社より送信するお客様への電子メールは、お客様個人宛にお客様のお問い合わせにお答えさせていただく目的でお送りするものです。
+        </p>
+        <div class="confirm" style="display: none">
+          <p>お問い合わせいただき<span class="sp_i"><br></span>ありがとうございました。<br>１週間以内にご登録いただいた<span class="sp_i"><br></span>メールアドレス宛に<span class="sp_i"><br></span>返信させていただきます。</p>
+          <p>※受信制限をしている方は、<span class="sp_i"><br></span>info@handihouse.jpからのメールを<span class="sp_i"><br></span>受信できるよう設定をお願いします。</p>
+          <div class=""><a href="<?= URL_TOP ?>" class="btn_a">TOP</a></div>
+        </div>
       </div>
+
+<script>
+$(function() {
+  $('form input, form textarea').on('input keyup blur', function() {
+    if ($('input[name="contact_name"]').val() != ''
+    && $('input[name="contact_mail"]').val() != ''
+    && $('input[name="contact_phone"]').val() != ''
+    && $('textarea[name="contact_text"]').val() != '') {
+      $('#submit').removeClass('nouse');
+    } else {
+      $('#submit').addClass('nouse');
+    }
+  });
+
+  if ($('div.wpcf7-mail-sent-ok').length > 0) {
+    $('div.wpcf7, #contact > p').hide();
+    $('div.confirm').show();
+  }
+});
+</script>
+<style>
+div.wpcf7-mail-sent-ok, div.wpcf7-validation-errors, form.sent p {
+  display:none;
+}
+</style>
 
 <?php get_template_part('2018/module/our_project'); ?>
 
