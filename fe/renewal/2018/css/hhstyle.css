@@ -448,7 +448,6 @@ ul#g_nav li img {
   ul#g_nav li:nth-child(6) {
     margin-right: 5px;
   }
-  ul#g_nav li img {}
 }
 
 ul#genre_nav {
@@ -464,6 +463,7 @@ ul#genre_nav li {
 }
 
 ul#genre_nav li.selected {
+  vertical-align: -5%;
   border-bottom: solid 1px black;
 }
 
@@ -1207,6 +1207,8 @@ a.btn_b:hover, a.btn_b:active {
 #cp_top ul#cp_list li {
   display: inline-block;
   margin: 0;
+  vertical-align: top;
+  position: relative;
 }
 
 #cp_top ul#cp_list li h3 {
@@ -1228,27 +1230,38 @@ a.btn_b:hover, a.btn_b:active {
   margin-right: 42px;
 }
 
-#cp_top ul#cp_list li:nth-child(n-2) h3 {
+#cp_top ul#cp_list li:nth-child(-n+2) {
+  margin-bottom: 60px;
+}
+
+#cp_top ul#cp_list li:nth-child(-n+2) h3 {
   font-size: 20px;
   ;
   width: 350px;
 }
 
-#cp_top ul#cp_list li:nth-child(n-2) .cpimg img {
+#cp_top ul#cp_list li:nth-child(-n+2) .cpimg img {
   width: 485px;
   margin-bottom: 16px;
 }
 
-#cp_top ul#cp_list li:nth-child(n-2) .cp_member {
+#cp_top ul#cp_list li:nth-child(-n+2) .cp_member {
   font-size: 12px;
   line-height: 1.66;
   width: 145px;
-  margin: -71px 0 70px 340px;
+  /*margin: -71px 0 70px 340px;*/
   text-align: center;
+  position: absolute;
+  top: 335px;
+  right: 0;
 }
 
 #cp_top ul#cp_list li:nth-child(3n), #cp_top ul#cp_list li:nth-child(3n+1) {
   margin-right: 24px;
+}
+
+#cp_top ul#cp_list li:nth-child(n+3) {
+  margin-bottom: 70px;
 }
 
 #cp_top ul#cp_list li:nth-child(n+3) h3 {
@@ -1257,15 +1270,16 @@ a.btn_b:hover, a.btn_b:active {
   height: 4em;
 }
 
-#cp_top ul#cp_list li:nth-child(n+3) .cpimg img{
+#cp_top ul#cp_list li:nth-child(n+3) .cpimg img {
   width: 320px;
+  margin-bottom: 16px;
 }
 
 #cp_top ul#cp_list li:nth-child(n+3) .cp_member {
   font-size: 11px;
   line-height: 1.66;
   width: 120px;
-  margin: -110px 0 62px 200px;
+  margin: -110px 0 0 200px;
   text-align: center;
 }
 
@@ -1335,7 +1349,6 @@ a.btn_b:hover, a.btn_b:active {
   #cp_top ul#cp_list li h3 {
     line-height: 1.55;
     display: block;
-    height: 4em;
   }
   #cp_top .cp_member img {
     width: 12vw;
@@ -1348,34 +1361,46 @@ a.btn_b:hover, a.btn_b:active {
   #cp_top ul#cp_list li:first-child {
     margin-right: 0;
   }
-  #cp_top ul#cp_list li:nth-child(n-2) h3 {
+  #cp_top ul#cp_list li:nth-child(-n+2) {
+    margin-bottom: 10vw;
+    height: 110vw;
+  }
+  #cp_top ul#cp_list li:nth-child(-n+2) h3 {
     font-size: 4.8vw;
     width: 50vw;
   }
-  #cp_top ul#cp_list li:nth-child(n-2) .cpimg {
+  #cp_top ul#cp_list li:nth-child(-n+2) .cpimg {
     width: 85vw;
     height: auto;
     margin-bottom: 0 0 5vw 0;
   }
-  #cp_top ul#cp_list li:nth-child(n-2) .cpimg img {
+  #cp_top ul#cp_list li:nth-child(-n+2) .cpimg img {
     width: 100%;
   }
-  #cp_top ul#cp_list li:nth-child(n-2) .cp_member {
+  #cp_top ul#cp_list li:nth-child(-n+2) .cp_member {
     font-size: 2.8vw;
     line-height: 1.6;
     width: 48vw;
-    margin: -32vw 0 3vw 45vw;
-    text-align: center;
+    top: 61vw;
+    right: -8vw;
+    /*margin: -32vw 0 3vw 45vw;*/
   }
   #cp_top ul#cp_list .readmore {
     font-family: 'Karla', sans-serif;
     font-size: 3.2vw;
     font-weight: bold;
     line-height: 1;
-    width: 88%;
-    margin: 0 0 16vw;
+    width: 80vw;
+    margin: 14vw 2vw 0;
     text-align: right;
     letter-spacing: .5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #cp_top ul#cp_list li:nth-child(n+3) {
+    height: 80vw;
+    margin-bottom: 7vw;
   }
   #cp_top ul#cp_list li:nth-child(2n+2) {
     margin-right: 0;
@@ -1389,8 +1414,9 @@ a.btn_b:hover, a.btn_b:active {
   #cp_top ul#cp_list li:nth-child(n+3) h3 {
     font-size: 3.7vw;
     width: 42vw;
+    height: auto;
   }
-  #cp_top ul#cp_list li:nth-child(n+3) .cpimg {
+  #cp_top ul#cp_list li:nth-child(n+3) .cpimg img {
     width: 42vw;
     height: auto;
     margin: 0;
@@ -1399,12 +1425,15 @@ a.btn_b:hover, a.btn_b:active {
     font-size: 2vw;
     line-height: 1.66;
     width: 42vw;
-    margin: 0 0 5vw;
+    position: relative;
+    margin: 2vw 0 5vw;
     text-align: left;
   }
   #cp_top ul#cp_list li:nth-child(n+3) .readmore {
     width: 42vw;
-    margin: 0 0 10vw;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
   }
   #cp_top ul#cp_list li:nth-child(n+3) .genre {
     font-size: 2.4vw;
@@ -2084,6 +2113,63 @@ iframe .i4ewOd-pzNkMb-haAclf {
   background-color: #eee;
 }
 
+#contact .confirm {
+  background-color: #eee;
+  margin: 50px 0 0;
+  padding: 80px 150px;
+}
+
+#contact .confirm h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#contact .confirm div:last-child {
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+}
+
+#contact .confirm .input_data {
+  display: block;
+  width: 470px;
+  margin: -32px 0 32px 250px;
+  padding: 0;
+}
+
+#contact .confirm p:nth-of-type(1) {
+  font-size: 16px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#contact .confirm p:last-of-type {
+  margin: 10px 0 30px;
+  ;
+  font-size: 14px;
+  text-align: center;
+  width: auto;
+}
+
+#contact .confirm small {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#contact .confirm a.btn_a {
+  display: inline-flex;
+  width: 260px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px auto 0;
+  border-width: 1px;
+}
+
 @media screen and (max-width: 749px) {
   #contact p {
     font-size: 3.7vw;
@@ -2145,6 +2231,45 @@ iframe .i4ewOd-pzNkMb-haAclf {
     color: #bbb;
     border-color: #ddd;
     background-color: #eee;
+  }
+  #contact .confirm {
+    background-color: #eee;
+    margin: 12vw auto;
+    width: 88vw;
+    padding: 8vw 6vw;
+  }
+  #contact .confirm h3, #contact .confirm div, #contact .confirm label {
+    font-size: 3.7vw;
+  }
+  #contact .confirm h3 {
+    text-align: center;
+    font-weight: normal;
+    width: 100%;
+    line-height: 2;
+    margin-bottom: 6vw;
+  }
+  #contact .confirm div:last-child {
+    text-align: center;
+    font-weight: normal;
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+  #contact .confirm .require {
+    margin-bottom: 0;
+  }
+  #contact .confirm .input_data {
+    display: block;
+    width: 100%;
+    margin: auto auto 6vw;
+    padding: 0;
+  }
+  #contact .confirm a.btn_a {
+    display: inline-flex;
+    width: 48vw;
+    height: 11vw;
+    font-size: 2.9vw;
+    margin: 4vw auto 0;
+    border-width: 1px;
   }
 }
 
