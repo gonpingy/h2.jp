@@ -1,6 +1,6 @@
 [HandiHouse project] お問い合わせいただきありがとうございます
 
-&#91;[contact_name]&#x5d;様
+[contact_name]様
 
 お問い合わせいただきありがとうございました。
 １週間以内にご登録いただいたメールアドレス宛に
@@ -8,16 +8,16 @@
 
 ------------------------------------------------------
 
-お名前：&#91;[contact_name]&#x5d;
+お名前：[contact_name]
 
-御社名（法人の方）：&#91;[contact_company]&#x5d;
+御社名（法人の方）：[contact_company]
 
-メールアドレス：&#91;[contact_mail]&#x5d;
+メールアドレス：[contact_mail]
 
-お電話番号：&#91;[contact_phone]&#x5d;
+お電話番号：[contact_phone]
 
 お問い合わせ内容：
-&#91;[contact_text]&#x5d;
+[contact_text]
 
 ------------------------------------------------------
 
