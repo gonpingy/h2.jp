@@ -105,7 +105,7 @@ if (empty($og_description)) {
       <?php if (is_page_template('ip_top.php') || is_page_template('cp_top.php')): ?>
       <a href="<?= URL_TOP ?>">HOME</a>　>　<a href="<?= URL_PROJECT ?>">PROJECT</a>　>　<?= get_the_title() ?>
       <?php elseif (is_page_template('cp_detail.php')): ?>
-      <a href="<?= URL_PROJECT ?>">PROJECT</a>　>　<a href="<?= URL_COLLABORATION_PROJECTS ?>">COLLABORATION PROJECTS</a> > <?= get_the_title() ?>
+      <a href="<?= URL_TOP ?>">HOME</a>　>　<a href="<?= URL_PROJECT ?>">PROJECT</a>　>　<a href="<?= URL_COLLABORATION_PROJECTS ?>">COLLABORATION PROJECTS</a>　>　<?= get_the_title() ?>
       <?php else: ?>
       <a href="<?= URL_TOP ?>">HOME</a>　>　<?= get_the_title() ?>
       <?php endif; ?>
