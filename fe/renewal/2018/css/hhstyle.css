@@ -189,8 +189,7 @@ li {
   ;
 }
 
-/*途中に全画面画像を挟みたい場合に一番下のエリア以外に使用する*/
-
+/*途中に横全画面画像を挟みたい場合に一番下のエリア以外に使用する*/
 .contents_wrapper_mid {
   width: 1060px;
   margin: 0 auto;
@@ -351,9 +350,6 @@ li {
 /*チェックが入ったらもろもろ表示*/
 
 #nav_input:checked~.nav_open {
-  /*  display: block;/*カバーを表示*/
-  /*  position:absolute;*/
-  /*opacity: .5;*/
 }
 
 #nav_input:checked~.nav_open span {
@@ -495,6 +491,7 @@ ul#genre_nav li.selected {
   line-height: 1;
   float: none;
   padding: 95px 20px 0 20px;
+  width:90%;
 }
 
 #pan a {
@@ -505,7 +502,11 @@ ul#genre_nav li.selected {
 #pan a:hover, #pan a:active {
   border-bottom: 1px solid #f04e23;
 }
-
+@media screen and (max-width: 749px) {
+  #pan {
+    line-height: 2;
+  }
+}
 /*page nav ---*/
 
 #page_nav {
@@ -558,7 +559,7 @@ ul#genre_nav li.selected {
 /*our project--*/
 
 .op h2 {
-  font-size: 48px;
+  font-size: 38px;
   line-height: 1;
   padding-top: 110px;
   text-align: center;
@@ -831,14 +832,12 @@ a.btn_b:hover, a.btn_b:active {
 .move-page-top {
   display: block;
   width: 60px;
-  /*70px;*/
   height: 62px;
   cursor: pointer;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
   animation: run .4s steps(3) infinite;
-  /*72px;*/
   color: #fff;
   background: url('../img/i_totop_pc.png') no-repeat;
 }
@@ -1253,7 +1252,6 @@ a.btn_b:hover, a.btn_b:active {
   font-size: 12px;
   line-height: 1.66;
   width: 145px;
-  /*margin: -71px 0 70px 340px;*/
   text-align: center;
   position: absolute;
   top: 335px;
@@ -1283,8 +1281,11 @@ a.btn_b:hover, a.btn_b:active {
   font-size: 11px;
   line-height: 1.66;
   width: 120px;
-  margin: -110px 0 0 200px;
+/*  margin: -110px 0 0 200px;*/
   text-align: center;
+  position: absolute;
+  top: 230px;
+  right: -10px;
 }
 
 #cp_top ul#cp_list li:nth-child(n+3) .cp_member img {
@@ -1301,6 +1302,12 @@ a.btn_b:hover, a.btn_b:active {
 
 #cp_top ul#cp_list li .cpimg {
   position: relative;
+  height:300px;
+  margin-bottom:30px;
+  overflow: hidden;
+}
+#cp_top ul#cp_list li:nth-child(n+3) .cpimg {
+  height:200px;
 }
 
 #cp_top ul#cp_list li .cpimg:hover {
@@ -1367,16 +1374,17 @@ a.btn_b:hover, a.btn_b:active {
   }
   #cp_top ul#cp_list li:nth-child(-n+2) {
     margin-bottom: 10vw;
-    height: 110vw;
+    min-height: 98vw;
   }
   #cp_top ul#cp_list li:nth-child(-n+2) h3 {
     font-size: 4.8vw;
     width: 50vw;
   }
+
   #cp_top ul#cp_list li:nth-child(-n+2) .cpimg {
     width: 85vw;
-    height: auto;
-    margin-bottom: 0 0 5vw 0;
+    height: 53vw;
+    margin: 0 0 5vw 0;
   }
   #cp_top ul#cp_list li:nth-child(-n+2) .cpimg img {
     width: 100%;
@@ -1387,7 +1395,6 @@ a.btn_b:hover, a.btn_b:active {
     width: 48vw;
     top: 61vw;
     right: -8vw;
-    /*margin: -32vw 0 3vw 45vw;*/
   }
   #cp_top ul#cp_list .readmore {
     font-family: 'Karla', sans-serif;
@@ -1395,7 +1402,7 @@ a.btn_b:hover, a.btn_b:active {
     font-weight: bold;
     line-height: 1;
     width: 80vw;
-    margin: 14vw 2vw 0;
+    margin: 14vw 3vw 0;
     text-align: right;
     letter-spacing: .5px;
     position: absolute;
@@ -1403,8 +1410,12 @@ a.btn_b:hover, a.btn_b:active {
     right: 0;
   }
   #cp_top ul#cp_list li:nth-child(n+3) {
-    height: 80vw;
-    margin-bottom: 7vw;
+    min-height: 68vw;
+    margin-bottom: 10vw;
+  }
+  #cp_top ul#cp_list li:nth-child(n+3) .cp_member{
+    top: 0;
+    right: 0;
   }
   #cp_top ul#cp_list li:nth-child(2n+2) {
     margin-right: 0;
@@ -1419,6 +1430,10 @@ a.btn_b:hover, a.btn_b:active {
     font-size: 3.7vw;
     width: 42vw;
     min-height: auto;
+  }
+  #cp_top ul#cp_list li:nth-child(n+3) .cpimg{
+    height:26vw;
+    margin-bottom:4vw;
   }
   #cp_top ul#cp_list li:nth-child(n+3) .cpimg img {
     width: 42vw;
@@ -2055,24 +2070,6 @@ iframe .i4ewOd-pzNkMb-haAclf {
   width: 610px;
   margin-top: 80px;
 }
-
-/*
-#contact select {
-  display: block;
-  margin: -34px 0 34px 270px;
-  padding: 0;
-  width: 300px;
-  height: 40px;
-  padding: 5px 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border-color: #ccc;
-  letter-spacing: 1px;
-  background: url(../img/form_arrow.png) 95% 50% no-repeat;
-}
-*/
 
 #contact input, #contact textarea {
   display: block;
