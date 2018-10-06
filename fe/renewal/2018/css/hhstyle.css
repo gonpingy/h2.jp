@@ -1508,6 +1508,8 @@ a.btn_b:hover, a.btn_b:active {
 #cp_detail #article img {
   margin: 0;
   padding: 0;
+  width: 920px;
+  height: auto;
 }
 
 #cp_detail #article br+img {
