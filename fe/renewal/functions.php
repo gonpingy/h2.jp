@@ -201,7 +201,13 @@ function member_to_photo($member) {
 }
 
 function member_last_name($member) {
-  return explode(" ", $member)[0];
+  $index = 0;
+
+  if ($member == '中田 理恵') {
+    $index = 1;
+  }
+
+  return explode(" ", $member)[$index];
 }
 
 add_filter('wpcf7_load_js', '__return_false');
